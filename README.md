@@ -2,6 +2,6 @@
 Simple console app to reply back to whatever an user type in the console
 
 
-####Spec
-Node
+#### Spec
+Node, 
 nlp.js
