@@ -32,9 +32,14 @@ manager.addAnswer('en', 'greetings.hello', 'Greetings!');
   await manager.train();
   manager.save();
   //prompt
+  console.log("Say something to me!!")
+  // rl.question('Say something: ', async (reply) => {
+  //   const res = await manager.process('en', reply);
+  //   console.log('Bot: ', res.answer);
+  // });
 
-  rl.question('Say something: ', async reply => {
-    const res = await manager.process('en', reply);
+  rl.on('line', async (input) => {
+    const res = await manager.process('en', input);
     console.log('Bot: ', res.answer);
   });
 
